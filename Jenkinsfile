@@ -1,15 +1,11 @@
-pipeline
-{
-agent any
-stages
-{
-stages('Build')
-{
-steps
-{
-sh 'ls -ltr'
-}
-}
-}
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'ls -ltr'
+            }
+        }
+    }
 }
 
