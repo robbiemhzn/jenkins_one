@@ -17,7 +17,7 @@ pipeline {
 	{
 	steps
 	{
-	sh 'cd tr && terraform init'
+	sh 'cd tr && terraform init && terraform plan && terraform apply -auto-approve && terraform destroy -auto-approve'
 	}
 	}
 }
