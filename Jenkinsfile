@@ -13,5 +13,12 @@ pipeline {
 		     sh 'docker run -dit --name httptst05 -p83:80 httptst'
 		     }
 		}
+	stage ('Iac')
+	{
+	steps
+	{
+	sh 'cd tr && terraform init'
+	}
+	}
 }
 }
